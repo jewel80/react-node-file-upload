@@ -1,8 +1,11 @@
 let express = require('express'),
     multer = require('multer'),
     mongoose = require('mongoose'),
-    uuidv4 = require('uuid/v4'),
     router = express.Router();
+
+const { v4: uuidv4 } = require('uuid');
+
+
 
 const DIR = './public/';
 
@@ -12,6 +15,7 @@ const storage = multer.diskStorage({
     },
     filename: (req, file, cb) => {
         const fileName = file.originalname.toLowerCase().split(' ').join('-');
+        console.log(fileName);
         cb(null, uuidv4() + '-' + fileName)
     }
 });
