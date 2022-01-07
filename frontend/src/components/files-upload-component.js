@@ -6,7 +6,7 @@ export default class FilesUploadComponent extends Component {
             <div className="container">
                 <div className="row">
                     <form>
-                        <h3>React File Upload.</h3>
+                        <h3>React File Upload</h3>
                         <div className="form-group">
                             <input type="file" />
                         </div>
